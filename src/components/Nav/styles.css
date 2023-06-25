@@ -1,0 +1,13 @@
+.nav {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    flex: 1 0 auto;
+ }
+.nav__element {
+   text-decoration: none;
+   color: black;
+}
+.nav__element:hover {
+    color: #e8e8e8;
+ }

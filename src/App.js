@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Content from './components/Content';
+import data from './data';
+import alerts from './alerts';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPTLYmq9U-LTNq-aKr2hwqz8k8blo8bzir5-UbHGf&s' title='Это учебный проект'></Header>
+      <Nav navArr={data}></Nav>
+      <Content contentArr={alerts}></Content>
+      <Footer></Footer>
     </div>
   );
 }
