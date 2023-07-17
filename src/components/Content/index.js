@@ -4,6 +4,7 @@ import Alert from '../Alert';
 import Button from '../Button';
 
 import "./styles.css";
+import Slider from "../Slider";
 
 const Content = (props) => {
   const [isShowed, hide] = useState(true);
@@ -14,9 +15,12 @@ const Content = (props) => {
   return (
     <div className = "content">
       <Button type = "button" text = {(isShowed ? 'Скрыть ' : 'Показать ') + 'уведомления'} onClick = {onClickHandle}></Button>
-        {isShowed ? props.contentArr.map((element, index) => {
-            return <Alert key = {index + element.text} color = {element.color} text = {element.text}></Alert>;
-        }) : ''}
+      <div className="alert__block">
+          {isShowed ? props.alerts.map((element, index) => {
+              return <Alert key = {index + element.text} color = {element.color} text = {element.text}></Alert>;
+          }) : ''}
+      </div>
+      <Slider picturesArr={props.sliderPictures}></Slider>
     </div>
   );
 };
